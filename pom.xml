@@ -94,6 +94,11 @@
             <artifactId>asm</artifactId>
             <version>${asm.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-xml</artifactId>
+            <version>6.2.1</version>
+        </dependency>
     </dependencies>
 
     <build>
