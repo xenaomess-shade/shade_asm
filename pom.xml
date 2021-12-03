@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xenoamess.shades</groupId>
-    <artifactId>org.ow2.asm.asm.${asm.version}</artifactId>
+    <artifactId>org.ow2.asm.asm.${asm.version.name}</artifactId>
     <version>${asm.version}</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
@@ -33,6 +33,7 @@
 
     <properties>
         <asm.version>9.2</asm.version>
+        <asm.version.name>v_9_2</asm.version.name>
         <java.version>8</java.version>
         <!---->
         <!---->
@@ -104,7 +105,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.objectweb.asm</pattern>
-                                    <shadedPattern>com.xenoamess.org.objectweb.asm.${asm.version}</shadedPattern>
+                                    <shadedPattern>com.xenoamess.org.objectweb.asm.${asm.version.name}</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
