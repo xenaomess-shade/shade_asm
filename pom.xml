@@ -95,9 +95,9 @@
             <version>${asm.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.ow2.asm</groupId>
+            <groupId>com.xenoamess.asm</groupId>
             <artifactId>asm-xml</artifactId>
-            <version>6.2.1</version>
+            <version>9.2.1</version>
         </dependency>
     </dependencies>
 
