@@ -34,7 +34,12 @@
     <properties>
         <asm.version>9.2</asm.version>
         <asm.version.name>v_9_2</asm.version.name>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <project.build.sourceEncoding>${maven.compiler.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${maven.compiler.encoding}</project.reporting.outputEncoding>
         <java.version>8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <!---->
         <!---->
         <!--maven plugins versions-->
@@ -44,6 +49,15 @@
     </properties>
 
     <profiles>
+        <profile>
+            <id>maven.compiler.release</id>
+            <activation>
+                <jdk>[9,)</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.release>${java.version}</maven.compiler.release>
+            </properties>
+        </profile>
         <profile>
             <id>ossrh</id>
             <!-- GPG mvn clean deploy -P release -Dgpg.passphrase=YourPassphase -->
@@ -141,6 +155,21 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}
+                    </source>
+                    <target>${maven.compiler.target}
+                    </target>
+                    <meminitial>128m</meminitial>
+                    <maxmem>512m</maxmem>
+                    <fork>true</fork>
+                    <compilerVersion>${java.version}</compilerVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>
