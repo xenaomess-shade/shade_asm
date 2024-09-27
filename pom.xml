@@ -32,7 +32,7 @@
     </scm>
 
     <properties>
-        <asm.version>9.2</asm.version>
+        <asm.version>9.7</asm.version>
         <asm.version.name>v_9_2</asm.version.name>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <project.build.sourceEncoding>${maven.compiler.encoding}</project.build.sourceEncoding>
@@ -111,7 +111,7 @@
         <dependency>
             <groupId>com.xenoamess.asm</groupId>
             <artifactId>asm-xml</artifactId>
-            <version>9.2.1</version>
+            <version>9.7.0</version>
         </dependency>
     </dependencies>
 
