@@ -22,3 +22,10 @@ jobs:
     
     - name: Build with Maven
       run: ./mvnw clean install -B -V
+    
+    - name: Upload plugin artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: shade-asm-plugin
+        path: target/*.jar
+        retention-days: 30
