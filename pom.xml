@@ -32,7 +32,7 @@
     </scm>
 
     <properties>
-        <asm.version>9.7</asm.version>
+        <asm.version>9.9.1</asm.version>
         <asm.version.name>v_9_2</asm.version.name>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <project.build.sourceEncoding>${maven.compiler.encoding}</project.build.sourceEncoding>
