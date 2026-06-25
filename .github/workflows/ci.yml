@@ -24,7 +24,7 @@ jobs:
       run: ./mvnw clean install -B -V
     
     - name: Upload plugin artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: shade-asm-plugin
         path: target/*.jar
