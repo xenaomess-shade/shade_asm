@@ -4,11 +4,29 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 100
-    reviewers:
-      - "xenoamess"
-    assignees:
-      - "xenoamess"
+      day: "monday"
+      time: "04:00"
+      timezone: "Asia/Shanghai"
+    target-branch: "master"
+    open-pull-requests-limit: 10
     commit-message:
-      prefix: "deps"
-      include: "scope"
+      prefix: "build(deps)"
+      prefix-development: "build(deps-dev)"
+    labels:
+      - "dependencies"
+      - "java"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Asia/Shanghai"
+    target-branch: "master"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+      - "github-actions"
